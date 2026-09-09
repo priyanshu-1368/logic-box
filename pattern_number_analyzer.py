@@ -1,4 +1,4 @@
-print("Welcome to the Pattern Generator and Number Analyzer! \n")
+print("\n Welcome to the Pattern Generator and Number Analyzer! \n")
 
 while True:
     print("Select an option:")
@@ -15,15 +15,16 @@ while True:
             print("3. Decreasing Stars")
             print("4. Decreasing Numbers")
             print("5. Decreasing Start Numbers")
+
             pattern_choice = input("Enter your choice (1-5): ")
 
-            if pattern_choice not in ("1", "2", "3", "4", "5"):
+            if pattern_choice not in("1", "2", "3", "4", "5"):
                 print("Invalid pattern choice.\n")
                 continue
 
             user_input = input("Enter the number of rows for the pattern: ")
 
-            if not user_input.isdigit() or int(user_input) <= 0:
+            if int(user_input) <= 0:
                 print("Invalid input. Row count must be a positive whole number.\n")
                 continue
 
