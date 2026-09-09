@@ -3,7 +3,7 @@
 ## Output
 
 ### Pattern Genrator
-![Pattern Genrator](Screenshots/Patern Gen.png)
+![Pattern Genrator](Screenshots/img1.png)
 
 ### Number Analyzer
-![Number Analyzer](Screenshots/Evn_Odd.png)
+![Number Analyzer](Screenshots/img2.png)
