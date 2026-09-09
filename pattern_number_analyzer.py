@@ -1,9 +1,9 @@
-print("Welcome to the Pattern Generator and Number Analyzer!")
+print("Welcome to the Pattern Generator and Number Analyzer! \n")
 
 running = True
 
 while running:
-    print("\nSelect an option:")
+    print("Select an option:")
     print("1. Generate a Pattern")
     print("2. Analyze a Range of Numbers")
     print("3. Exit")
