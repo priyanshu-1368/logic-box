@@ -1,111 +1,72 @@
 print("Welcome to the Pattern Generator and Number Analyzer! \n")
 
-running = True
-
-while running:
+while True:
     print("Select an option:")
     print("1. Generate a Pattern")
     print("2. Analyze a Range of Numbers")
     print("3. Exit")
     choice = input("Enter your choice: ")
 
-    if choice == "1":
-        print("\nSelect a pattern type:")
-        print("1.Increasing Stars")
-        print("2.Increasing Numbers")
-        print("3.Decreasing Stars")
-        print("4.Decreasing Numbers")
-        print("5.Decreasing Start Numbers")
-        pattern_choice = input("Enter your choice (1-5): ")
+    match choice:
+        case "1":
+            print("\nSelect a pattern type:")
+            print("1. Increasing Stars")
+            print("2. Increasing Numbers")
+            print("3. Decreasing Stars")
+            print("4. Decreasing Numbers")
+            print("5. Decreasing Start Numbers")
+            pattern_choice = input("Enter your choice (1-5): ")
 
-        if pattern_choice not in("1", "2", "3", "4", "5"):
-            print("Invalid pattern choice.")
-            continue
+            if pattern_choice not in ("1", "2", "3", "4", "5"):
+                print("Invalid pattern choice.\n")
+                continue
 
-        user_input = input("Enter the number of rows for the pattern: ")
+            user_input = input("Enter the number of rows for the pattern: ")
 
-        if not user_input.isdigit():
-            print("Invalid input. Please enter a positive whole number.")
-            continue
+            if not user_input.isdigit() or int(user_input) <= 0:
+                print("Invalid input. Row count must be a positive whole number.\n")
+                continue
 
-        rows = int(user_input)
+            rows = int(user_input)
+            print("\nPattern:")
 
-        if rows <= 0:
-            print("Row count must be greater than zero.")
-            continue
+            match pattern_choice:
+                case "1":
+                    for i in range(1, rows + 1):
+                        print("*" * i)
 
-        print("\nPattern:")
+                case "2":
+                    for i in range(1, rows + 1):
+                        for j in range(1, i + 1):
+                            print(j, end="")
+                        print()
 
-        if pattern_choice == "1":
-            i = 1
-            while i <= rows:
-                for j in range(i):
-                    print("*", end="")
-                print()
-                i += 1
+                case "3":
+                    for i in range(rows, 0, -1):
+                        print("*" * i)
 
-        elif pattern_choice == "2":
-            i = 1
-            while i <= rows:
-                for j in range(1, i+1):
-                    print(j, end="")
-                print()
-                i += 1
+                case "4":
+                    for i in range(rows, 0, -1):
+                        for j in range(1, i + 1):
+                            print(j, end="")
+                        print()
 
-        elif pattern_choice == "3":
-            i = rows
-            while i >= 1:
-                for j in range(i):
-                    print("*", end="")
-                print()
-                i -= 1
+                case "5":
+                    for i in range(rows, 0, -1):
+                        for j in range(i, rows + 1):
+                            print(j, end=" ")
+                        print()
 
-        elif pattern_choice == "4":
-            i = rows
-            while i >= 1:
-                for j in range(1, i+1):
-                    print(j, end="")
-                print()
-                i -= 1
+        case "2":
+             start = int(input("\nEnter the start of the range: "))
+             end = int(input("Enter the end of the range: "))
 
-        elif pattern_choice == "5":
-            for i in range(5, 0, -1):
-                for j in range(i, 5+1):
-                    print(j, end=" ")
-                print()
-                
+             for num in range(start, end + 1):
+                    print(f"{num} is even." if num % 2 == 0 else f"{num} is odd.")
 
-    elif choice == "2":
-        start_input = input("Enter the start of the range: ")
-        end_input = input("Enter the end of the range: ")
+        case "3":
+            print("Exiting the program. Goodbye!")
+            break
 
-        if not (start_input.lstrip("-").isdigit() and end_input.lstrip("-").isdigit()):
-            print("Invalid input. Please enter whole numbers only.")
-            continue
-
-        start = int(start_input)
-        end = int(end_input)
-
-        if end < start:
-            print("End of range must be greater than or equal to start.")
-            continue
-
-        total = 0
-        for num in range(start, end + 1):
-            if num == 0:
-                pass
-            if num % 2 == 0:
-                print(f"Number {num} is Even")
-            else:
-                print(f"Number {num} is Odd")
-            total += num
-
-        print(f"Sum of all numbers from {start} to {end} is: {total}")
-
-    elif choice == "3":
-        print("Exiting the program. Goodbye!")
-        running = False
-        break
-
-    else:
-        print("Invalid choice. Please select 1, 2, or 3.")
+        case _:
+            print("Invalid choice. Please select 1, 2, or 3.\n")
