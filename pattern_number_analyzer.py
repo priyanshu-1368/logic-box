@@ -1,11 +1,11 @@
-print("\n Welcome to the Pattern Generator and Number Analyzer! \n")
+print("\n Welcome to the Pattern Generator and Number Analyzer!")
 
 while True:
-    print("Select an option:")
+    print("\nSelect an option:")
     print("1. Generate a Pattern")
     print("2. Analyze a Range of Numbers")
     print("3. Exit")
-    choice = input("Enter your choice: ")
+    choice = input("\nEnter your choice: ")
 
     match choice:
         case "1":
@@ -16,7 +16,7 @@ while True:
             print("4. Decreasing Numbers")
             print("5. Decreasing Start Numbers")
 
-            pattern_choice = input("Enter your choice (1-5): ")
+            pattern_choice = input("\nEnter your choice (1-5): ")
 
             if pattern_choice not in("1", "2", "3", "4", "5"):
                 print("Invalid pattern choice.\n")
@@ -66,7 +66,7 @@ while True:
                     print(f"{num} is even." if num % 2 == 0 else f"{num} is odd.")
 
         case "3":
-            print("Exiting the program. Goodbye!")
+            print("\nExiting the program. Goodbye! \n")
             break
 
         case _:
