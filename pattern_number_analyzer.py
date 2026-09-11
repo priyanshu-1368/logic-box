@@ -9,7 +9,7 @@ while True:
 
     match choice:
         case "1":
-            print("\nSelect a pattern type:")
+            print("\nSelect pattern type:")
             print("1. Increasing Stars")
             print("2. Increasing Numbers")
             print("3. Decreasing Stars")
