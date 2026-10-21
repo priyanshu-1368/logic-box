@@ -17,96 +17,95 @@ while True:
 
     match choice:
         case "1":
-            while True:
-                print("\n" + divider + "\n")
-                print("  ┌── [ SELECT PATTERN TYPE ] ───────────────────────────┐")
-                print("  │  [1] Increasing Stars      [6] Hollow Square         │")
-                print("  │  [2] Increasing Numbers    [7] Diamond Pattern       │")
-                print("  │  [3] Decreasing Stars      [8] Butterfly Pattern     │")
-                print("  │  [4] Decreasing Numbers    [9] Number Pyramid        │")
-                print("  │  [5] Decreasing Start Num  [10] Star Pyramid         │")
-                print("  └──────────────────────────────────────────────────────┘")
+            print("\n" + divider + "\n")
+            print("  ┌── [ SELECT PATTERN TYPE ] ───────────────────────────┐")
+            print("  │  [1] Increasing Stars      [6] Hollow Square         │")
+            print("  │  [2] Increasing Numbers    [7] Diamond Pattern       │")
+            print("  │  [3] Decreasing Stars      [8] Butterfly Pattern     │")
+            print("  │  [4] Decreasing Numbers    [9] Number Pyramid        │")
+            print("  │  [5] Decreasing Start Num  [10] Star Pyramid         │")
+            print("  └──────────────────────────────────────────────────────┘")
 
-                pattern_choice = input("  ➤ Enter pattern choice (1-10): ").strip()
+            pattern_choice = input("  ➤ Enter pattern choice (1-10): ").strip()
 
-                if pattern_choice not in ("1", "2", "3", "4", "5", "6", "7", "8", "9", "10"):
-                    print("  [!] Invalid pattern choice.\n")
-                    continue
+            if pattern_choice not in ("1", "2", "3", "4", "5", "6", "7", "8", "9", "10"):
+                print("  [!] Invalid pattern choice.\n")
+                continue
 
-                user_input = input("  ➤ Enter the value: ").strip()
+            user_input = input("  ➤ Enter the value: ").strip()
 
-                if int(user_input) <= 0:
-                    print("  [!] Invalid input. Must be a positive whole number.\n")
-                    continue
+            if int(user_input) <= 0:
+                print("  [!] Invalid input. Must be a positive whole number.\n")
+                continue
 
-                n = int(user_input)
-                print("\n  ┌── [ PATTERN RESULT ] " + ("─" * 33))
+            n = int(user_input)
+            print("\n  ┌── [ PATTERN RESULT ] " + ("─" * 33))
 
-                match pattern_choice:
-                    case "1":
-                        for i in range(1, n + 1):
-                            print("  │ " + ("*" * i))
+            match pattern_choice:
+                case "1":
+                    for i in range(1, n + 1):
+                        print("  │ " + ("*" * i))
 
-                    case "2":
-                        for i in range(1, n + 1):
-                            print("  │ ", end="")
-                            for j in range(1, i + 1):
-                                print(j, end="")
-                            print()
+                case "2":
+                    for i in range(1, n + 1):
+                        print("  │ ", end="")
+                        for j in range(1, i + 1):
+                            print(j, end="")
+                        print()
 
-                    case "3":
-                        for i in range(n, 0, -1):
-                            print("  │ " + ("*" * i))
+                case "3":
+                    for i in range(n, 0, -1):
+                        print("  │ " + ("*" * i))
 
-                    case "4":
-                        for i in range(n, 0, -1):
-                            print("  │ ", end="")
-                            for j in range(1, i + 1):
-                                print(j, end="")
-                            print()
+                case "4":
+                    for i in range(n, 0, -1):
+                        print("  │ ", end="")
+                        for j in range(1, i + 1):
+                            print(j, end="")
+                        print()
 
-                    case "5":
-                        for i in range(n, 0, -1):
-                            print("  │ ", end="")
-                            for j in range(i, n + 1):
-                                print(j, end=" ")
-                            print()
+                case "5":
+                    for i in range(n, 0, -1):
+                        print("  │ ", end="")
+                        for j in range(i, n + 1):
+                            print(j, end=" ")
+                        print()
 
-                    case "6":
-                        for i in range(n):
-                            print("  │ ", end="")
-                            for j in range(n):
-                                if i == 0 or i == n - 1 or j == 0 or j == n - 1:
-                                    print("*", end=" ")
-                                else:
-                                    print(" ", end=" ")
-                            print()
+                case "6":
+                    for i in range(n):
+                        print("  │ ", end="")
+                        for j in range(n):
+                            if i == 0 or i == n - 1 or j == 0 or j == n - 1:
+                                print("*", end=" ")
+                            else:
+                                print(" ", end=" ")
+                        print()
 
-                    case "7":
-                        for i in range(1, n + 1):
-                            print("  │ " + " " * (n - i) + "*" * (2 * i - 1))
-                        for i in range(n - 1, 0, -1):
-                            print("  │ " + " " * (n - i) + "*" * (2 * i - 1))
+                case "7":
+                    for i in range(1, n + 1):
+                        print("  │ " + " " * (n - i) + "*" * (2 * i - 1))
+                    for i in range(n - 1, 0, -1):
+                        print("  │ " + " " * (n - i) + "*" * (2 * i - 1))
 
-                    case "8":
-                        for i in range(1, n + 1):
-                            print("  │ " + "*" * i + " " * (2 * (n - i)) + "*" * i)
-                        for i in range(n, 0, -1):
-                            print("  │ " + "*" * i + " " * (2 * (n - i)) + "*" * i)
+                case "8":
+                    for i in range(1, n + 1):
+                        print("  │ " + "*" * i + " " * (2 * (n - i)) + "*" * i)
+                    for i in range(n, 0, -1):
+                        print("  │ " + "*" * i + " " * (2 * (n - i)) + "*" * i)
 
-                    case "9":
-                        for i in range(1, n + 1):
-                            print("  │ " + "  " * (n - i), end="")
-                            for j in range(1, i + 1):
-                                print(j, end=" ")
-                            for j in range(i - 1, 0, -1):
-                                print(j, end=" ")
-                            print()
+                case "9":
+                    for i in range(1, n + 1):
+                        print("  │ " + "  " * (n - i), end="")
+                        for j in range(1, i + 1):
+                            print(j, end=" ")
+                        for j in range(i - 1, 0, -1):
+                            print(j, end=" ")
+                        print()
 
-                    case "10":
-                        for i in range(1, n + 1):
-                            print("  │ " + "  " * (n - i) + "* " * (2 * i - 1))
-                print("  └" + ("─" * 54))
+                case "10":
+                    for i in range(1, n + 1):
+                        print("  │ " + "  " * (n - i) + "* " * (2 * i - 1))
+            print("  └" + ("─" * 54))
 
         case "2":
             print("\n" + divider)
