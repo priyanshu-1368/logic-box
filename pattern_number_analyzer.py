@@ -24,12 +24,12 @@ while True:
                 print("  │  [2] Increasing Numbers    [7] Diamond Pattern       │")
                 print("  │  [3] Decreasing Stars      [8] Butterfly Pattern     │")
                 print("  │  [4] Decreasing Numbers    [9] Number Pyramid        │")
-                print("  │  [5] Decreasing Start Num  [10] Star Pyramid         │") 
+                print("  │  [5] Decreasing Start Num  [10] Star Pyramid         │")
                 print("  └──────────────────────────────────────────────────────┘")
 
                 pattern_choice = input("  ➤ Enter pattern choice (1-10): ").strip()
 
-                if pattern_choice not in ("1","2","3","4","5","6","7","8","9","10"):
+                if pattern_choice not in ("1", "2", "3", "4", "5", "6", "7", "8", "9", "10"):
                     print("  [!] Invalid pattern choice.\n")
                     continue
 
