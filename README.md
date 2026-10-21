@@ -10,6 +10,8 @@ Two things it can do:
 ## Pattern Generator
  
 10 pattern options - increasing stars, increasing numbers, decreasing stars, decreasing numbers, decreasing start numbers, hollow square, diamond pattern, butterfly pattern, number pyramid, and star pyramid. You choose the type, then how many n, and it prints it.
+
+![Logic Box](Screenshots/image%20%20(1).png)
  
 Sample run (option 1, increasing stars, 5 n):
  
@@ -50,6 +52,8 @@ Sample run (option 1, increasing stars, 5 n):
 
 
 ## Number Analyzer
+
+![Logic Box](Screenshots/image%20%20(2).png)
  
 Give it a start and end number, it prints odd/even for every number in between.
 
@@ -78,6 +82,8 @@ Give it a start and end number, it prints odd/even for every number in between.
 ```
 
 ## Exit
+
+![Logic Box](Screenshots/image%20%20(3).png)
 
 ```
 ══════════════════════════════════════════════════════════
